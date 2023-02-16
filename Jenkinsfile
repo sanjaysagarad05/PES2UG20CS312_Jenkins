@@ -11,13 +11,14 @@ pipeline {
     stage('test') {
       steps {
         sh './working'
-        echo'final output'
+        echo 'final output'
       }
     }
     
 	
     stage('deploy') {
       steps {
+	echo 'deploying'
       }
     }
   }
