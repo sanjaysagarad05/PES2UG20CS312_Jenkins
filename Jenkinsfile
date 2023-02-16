@@ -1,5 +1,6 @@
 pipeline {
   agent any
+	
   stages {
     stage('build') {
       steps {
@@ -26,6 +27,7 @@ pipeline {
   post {
     failure {
       echo 'pipeline isnt successful'
+       }
     }
   }
 }
