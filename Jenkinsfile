@@ -1,9 +1,6 @@
 pipeline {
   agent any
-
   stages {
-  
- 
     stage('build') {
       steps {
         sh 'g++ working.cpp -o working.cpp'
@@ -13,7 +10,7 @@ pipeline {
     
     stage('test') {
       steps {
-        sh './working.cpp'
+        sh './working'
         echo'final output'
       }
     }
@@ -22,9 +19,8 @@ pipeline {
     stage('deploy') {
       steps {
       }
-    
+    }
   }
-  
   
   post {
     failure {
